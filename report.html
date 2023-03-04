@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link href='https://fonts.googleapis.com/css?family=Mulish' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bc0e146360.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
+    <script src="local.js"></script>
+    <title>Document</title>
+</head>
+<body onload="renderlistreport()">
+    <div class="container">
+        <div class="left-side">
+            <a href="report.html">
+                <div class="option topborder box colorDrak">
+                    <div class="line"></div>
+                    <img class="magin10px" src="img/Path 21.png" alt="">
+                    <p>Danh sách báo cáo Excel</p>
+                </div>
+            </a>
+            <a href="import_report.html">
+                <div class="option">
+                    <img class="magin10px" src="img/Path 21.png" alt="">
+                    <p>Import Excel</p>
+                </div>
+            </a>
+        </div>
+        <div class="right-side" >
+            <div class="menu-top">
+                <div class="list-menu">
+                    <a href="">CẤU HÌNH</a>
+                    <div class="line-thin"></div>
+                    <a class="green" href="">MUA HÀNG
+                        <div class="line-bar"></div>
+                    </a>
+                    <div class="line-thin"></div>
+                    <a href="">KHO HÀNG</a>
+                    <div class="line-thin"></div>
+                    <a href="">DIỀU PHỐI</a>
+                    <div class="line-thin"></div>
+                    <a href="">MARKETING</a>
+                    <div class="line-thin"></div>
+                    <a href="">E-COMMERCE</a>
+                    <div class="line-thin"></div>
+                    <a href="">KINH DOANH</a>
+                    <div class="line-thin"></div>
+                    <a href="">NHÂN SỰ</a>
+                    <div class="line-thin"></div>
+                    <a href="">BÁO CÁO</a>
+                    <div class="line-thin"></div>
+                </div>
+                <div class="list-item-menu">
+                    <div class="search item">
+                        <img src="img/sreach.png" alt="">
+                    </div>
+                    <div class="noti item">
+                        <img src="img/bell-noti.png" alt="">
+                    </div>
+                    <div class="user item">
+                        <img class="user-img" src="img/bell-noti.png" alt="">
+                        <div class="action-dot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="decription">
+                    <img class="padding5px" src="img/filter.png" alt="">
+                    <p class="padding30px">LỌC DỮ LIỆU</p>
+                    <P class="fonttext">Tìm kiếm báo cáo</P>
+                </div>
+                <div class="search-bar">
+                    <a class="padding30px bb" onclick="resetdata()">Reset bộ lọc</a>
+                    <span>
+                        <input type="text" class="icon" id="textclear" value="" placeholder="Tìm theo tên báo cáo, mô tả báo cáo ">
+                    </span>
+                    <input type="button" id="btn-Search" onclick="searchdata()" class="iconw" value="Tìm">
+                </div>
+                <div class="line1px"></div>
+            </div>
+            <div class="content" >
+                <div class="dialog overlay" id="my-dialog">
+                    <div class="dialog-body">
+                        <div class="headder">
+                            ĐIỀU KIỆN XUẤT BÁO CÁO
+                        </div>
+                        <div class="contentdialog">
+                            <div class="conten">
+                                <p>Năm</p>
+                                <p>Tháng</p>
+                            </div>
+                            <div class="inputnum">
+                                <input type="number" name="" id="Year" value="2023">
+                                <input type="number" name="" id="Month" value="3">
+                            </div>
+                            <div class="btn">
+                                <button onclick="Exportreport()" class="custonbtm">xuất báo cáo</button>
+                                <a class="dialog-close-btn" href="#"><button class="custonbtm">Đóng</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table id="List_report">
+                    <tr>
+                        <th class="fonttext">Mã</th>
+                        <th class="fonttext">Tên đối tượng import</th>
+                        <th class="fonttext">Mô tả</th>
+                        <th > </th>
+                    </tr>
+                    <tr class="back-White">
+                        <th class="fonttext data">P001</th>
+                        <th id="name">Cập nhật thông tin hàng hóa</th>
+                        <th class="fonttext data fontweight">Cập nhật những dữ liệu liên quan tới thông tin hàng hóa để hiển thị trên hệ thống và website</th>
+                        <th class="Event">
+                            <label for="check"  class="option_item">
+                                <input type="checkbox" class="checkbox" name="" id="check">
+                                <div class="tick_doticon">
+                                    <i class="fa-solid fa-ellipsis custom"></i>
+                                    <div class="">
+                                        <div class="box-item">
+                                            <img src="img/xlsx.png" alt="">
+                                            <P>Xuất ra Excel</P>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </label>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
